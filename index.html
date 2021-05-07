@@ -6,49 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
         <header>
-            <h1 style="text-align:center">Flash Cards</h1>
-            <h2 style="text-align:center">Player= <input id="myinput" /></h2>
+            <h1 style="text-align:center" id="mainTitle">Flash Cards</h1>
+            <h2 style="text-align:center">Player= <button id="myinput" >Enter name here</button></h2>
             <h2 style="text-align:center" class="game-status">Enter your name above then click any square to begin</h2>
         </header>
         <div class="score-board">
-            <button style="text-align:center" class="scoreButton">Score:</button>
+            <button style="text-align:center" id="scoreButton">Score: 0</button>
 
         </div>
         <section id="game-board"></section>
                 <div class="game-board">
         
                     <div class="game-card">
-                        <img src="https://cdn2.thedogapi.com/images/y22wTybyu.jpg" class="randomDogImage">1
-                    </div>
+                        <img src="https://cdn2.thedogapi.com/images/y22wTybyu.jpg" id="miniPoodle">1</div>
                     <div class="game-card">
-                        <img src="https://cdn2.thedogapi.com/images/D-BUhOLOK.jpg" class="randomDogImage">2
-                    </div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/AbmDht85L.jpg" class="randomDogImage">3</div> 
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/MnFVJ4XuT.jpg" class="randomDogImage">4</div>
+                        <img src="https://cdn2.thedogapi.com/images/D-BUhOLOK.jpg" id="corgi">2</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/AbmDht85L.jpg" id="goldenRetriever">3</div> 
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/MnFVJ4XuT.jpg" id="sheepDog">4</div>
                  
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/xId09tcP2.jpg" class="randomDogImage">5</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/OoH2WtUnu.jpg" class="randomDogImage">6</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/4zVQwK8pM.jpg" class="randomDogImage">7</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/h9pRmljuG.jpg" class="randomDogImage">8</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/Bklnce5NX_1280.jpg" id="scottishTerrier">5</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/OoH2WtUnu.jpg" id="germanShepard">6</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/4zVQwK8pM.jpg" id="samoyed">7</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/KozrdsGZv.jpg" id="saintBernard">8</div>
                     
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/y22wTybyu.jpg" class="randomDogImage">1</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/D-BUhOLOK.jpg" class="randomDogImage">2</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/AbmDht85L.jpg" class="randomDogImage">3</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/MnFVJ4XuT.jpg" class="randomDogImage">4</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/y22wTybyu.jpg" id="miniPoodle">1</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/D-BUhOLOK.jpg" id="corgi">2</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/AbmDht85L.jpg" id="goldenRetriever">3</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/MnFVJ4XuT.jpg" id="sheepDog">4</div>
                     
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/xId09tcP2.jpg" class="randomDogImage">5</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/OoH2WtUnu.jpg" class="randomDogImage">6</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/4zVQwK8pM.jpg" class="randomDogImage">7</div>
-                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/h9pRmljuG.jpg" class="randomDogImage">8</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/Bklnce5NX_1280.jpg" id="scottishTerrier">5</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/OoH2WtUnu.jpg" id="germanShepard">6</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/4zVQwK8pM.jpg" id="samoyed">7</div>
+                    <div class="game-card"><img src="https://cdn2.thedogapi.com/images/KozrdsGZv.jpg" id="saintBernard">8</div>
       
                 </div>
         </section>
           <footer>
-             <button class="restartButton" style="text-align:center">Restart Game</button>   
+             <button id="restartButton" style="text-align:center">Restart Game</button>   
           </footer>
                 
     </main>
