@@ -70,15 +70,24 @@ img{/* width: 100%; */
     height: 125px;
     align-content: center;
     margin: 0 auto;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     /* visibility: hidden; */
 }
 
-.game-card{
-    
-    
+.hide{
+    display: block;
+    border: 8px solid dodgerblue;
+
+    /* background:  dimgrey; */
+    visibility: hidden; 
+    /* clip: rect(0,0,0,0);
+    color: transparent; */
+       
 }
+/* .game-card{
+    border: 1px solid dodgerblue;
+} */
 
 
 
