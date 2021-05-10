@@ -17,25 +17,37 @@ enterName.addEventListener("click", (event) => {
   // conditions for entering name
   if (userName != null) {
     document.querySelector("#myinput").innerText = `${userName}`;
+    document.querySelector(".game-status").innerText = "Try to find all the matches. Click any square below to begin";
+
     // startGame();
   } else if (userName == null) {
     document.querySelector("#myinput").innerText = "Enter name here";
-  }
-  console.log(userName);
+//     setTimeout(function() {
+//         modal.style.display = "block";
+//   }, 5000);};
+//   console.log(userName);
+//   var modal = document.getElementById("myModal");
+//   window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//     }
+  };
+
+  startGame();
 });
 
 // restart game
 let restartButton = document.querySelector("#restartButton");
-restartButton.addEventListener("click", (event) => {
-  console.log("test reset button");
-  // if button is clicked score should go back to 0
-  score = 0;
-  //  link current score and display it in score button
-  document.querySelector("#scoreButton").innerText = `Score: ${score}`;
-  // if button is clicked name of player should null
-  document.querySelector("#myinput").innerText = "Enter name here";
-  // startGame() function should be called
-  startGame();
+    restartButton.addEventListener("click", (event) => {
+    console.log("test reset button");
+// if button is clicked score should go back to 0
+    score = 0;
+//  link current score and display it in score button
+    document.querySelector("#scoreButton").innerText = `Score: ${score}`;
+// if button is clicked name of player should null
+    document.querySelector("#myinput").innerText = "Enter name here";
+// startGame() function should be called
+    startGame();
 });
 
 // Starting the game with a function
@@ -65,43 +77,6 @@ function startGame() {
     card.addEventListener("click", (event) => {
       console.log(card);
       console.log(event.target.id);
-                    // if (cardSelected !== [0]) {
-                    //     cardSelected.push(event.target.id);
-                    // }
-                    // console.log(cardSelected);
-                    // //  creat condition to check it cards are a match
-                    // if (cardSelected[0] == cardSelected[1]) {
-                    //     console.log("looped worked");
-                    //     // if match add a point to score
-                    //     score += 1;
-                    //     // update score button
-                    //     document.querySelector("#scoreButton").innerText = `Score: ${score}`;
-                    //     console.log(cardSelected[0]);
-                    //     console.log(score);
-                    //     // end game if score equals 8
-                    //     if (score == 8) {
-                    //     alert("Congratulations you found all the matches!");
-                    //     startGame();
-                    //     }
-                    //     // leave match visible
-                    //     // cardSelected[0].classList.toggle("hide");
-                    //     // cardSelected[1].classList.toggle("hide");
-
-                    //     // clear cardSelected Array?
-                    //     cardSelected = [];
-                    //     // if card is not the right match
-                    // } else if (
-                    //     cardSelected.length == 2 &&
-                    //     cardSelected[0] !== cardSelected[1]
-                    // ) {
-                    //     console.log("try again");
-                    //     //hide value of both cards selected
-                    //     cardSelected = [];
-                    //     //need compare that its not same square/location in array?
-                    // } else {
-                    //     //cardSelected[0].classList.toggle("hide");
-                    //     // cardSelected[1].classList.toggle("hide");
-                    // }
     });
   });
 
@@ -109,6 +84,15 @@ function startGame() {
 let hiddenCards = document.querySelectorAll(".game-card");
 hiddenCards.forEach(function (hcard) {
     hcard.addEventListener("click", (event) => {
+    //   create time out function for when card is clicked to see vaule for 1 second before flipping back.
+      let delayMilli = 1500;
+      setTimeout(function(){
+        event.target.childNodes[0].classList.toggle("hide");
+
+      }, delayMilli);
+
+      event.target.childNodes[0].classList.toggle("hide");
+
       console.log(`this is: ${hcard}`);
       console.log(event.target.childNodes[0].id);
       if (cardSelected !== [0]) {
@@ -122,30 +106,35 @@ hiddenCards.forEach(function (hcard) {
         score += 1;
         // update score button
         document.querySelector("#scoreButton").innerText = `Score: ${score}`;
-
-        event.target.childNodes[0].classList.toggle("hide");
-        console.log(event.target);
-            // event.target.childNodes[0[1]].classList.toggle("hide");
-
+        // updates game-status tag
+        
+        // this works for one card to show its value after clicked
+            event.target.childNodes[0].classList.toggle("hide");
+                // for(let i =0; i< cardSelected.length; i++){
+                //     event.target.childNodes[0].classList.toggle("hide");
+                //     console.log(event.target);
+                //     // event.target.childNodes[0[1]].classList.toggle("hide");
+                // };
         console.log(cardSelected[0]);
         console.log(score);
+
+        document.querySelector(".game-status").innerText = "Nice Job you found a match! Click any square below to continue";
+        
         // end game if score equals 8
         if (score == 8) {
+            document.querySelector(".game-status").innerText = "You found all the matches!";
+
             alert("Congratulations you found all the matches!");
             startGame();
-        }
-        // leave match visible
-        
+        };
         // clear cardSelected Array?
         cardSelected = [];
         // if card is not the right match
-    } else if (
-        cardSelected.length >= 2 &&
-        cardSelected[0] !== cardSelected[1]
-        ) {
-            
+    } else if (cardSelected.length == 2 && cardSelected[0] !== cardSelected[1]) {         
             console.log("try again");
-            //hide value of both cards selected
+            document.querySelector(".game-status").innerText = "Sorry that wasnt a match try again!";
+
+        //hide value of both cards selected
             cardSelected = [];
             //need compare that its not same square/location in array?
         } else {
@@ -164,21 +153,24 @@ hiddenCards.forEach(function (hcard) {
 
   // shuffle cards.
   console.log(toBeShuffledCards);
-            // let shuffledCards = [];
-            // //   let shuffledCards = toBeShuffledCards[randomCard];
-            // for (let i = 0; i < toBeShuffledCards.length; i++) {
-            //     let randomCard = Math.floor(Math.random() * toBeShuffledCards.length);
-            //     console.log(randomCard);
-            //     // if(randomCard != randomCard)
-            //     shuffledCards.push(toBeShuffledCards[randomCard]);
-            // }
-            // // console.log(`this is: ${randomCard}`);
-            // console.log(shuffledCards);
+        //     let shuffledCards = [];
+        //     //   let shuffledCards = toBeShuffledCards[randomCard];
+        // function shuffle(array){    
+        //     for (let i = 0; i < toBeShuffledCards.length; i++) {
+        //         let randomCard = Math.floor(Math.random() * toBeShuffledCards.length);
+        //         console.log(randomCard);
+        //         // if(randomCard != randomCard)
+        //         shuffledCards.push(toBeShuffledCards[randomCard]);
+        //     }}
+        //     shuffle(toBeShuffledCards);
+        //     // console.log(`this is: ${randomCard}`);
+        //     console.log(shuffledCards);
 
-            // // we need to hide the cards value and flip all cards at start
-            // for (let i = 0; i < shuffledCards.length; i++) {
-            //     shuffledCards[i].classList.add("hide");
-            // }
+        //     // we need to hide the cards value and flip all cards at start
+        //     for (let i = 0; i < shuffledCards.length; i++) {
+        //         shuffledCards[i].classList.add("hide");
+        //     }
+
 
       for(let i = 0;i< toBeShuffledCards.length; i++){
           toBeShuffledCards[i].classList.add("hide");
@@ -193,6 +185,13 @@ hiddenCards.forEach(function (hcard) {
 
 // start game
 //  window.onload = startGame();
+
+
+
+
+
+
+
 
 // DOING TOO MUCH!
 // // select all the cards
