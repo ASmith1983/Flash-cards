@@ -1,5 +1,11 @@
+
 header{
     margin-top: 5%;
+}
+h1,
+h2{
+    
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
 }
 
 body{
@@ -23,7 +29,7 @@ footer{
     width: auto;
     height: 30px;
     border-radius: 5px;
-    
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -31,6 +37,7 @@ footer{
     width: auto;
     height: 30px;
     border-radius: 5px;
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -38,6 +45,7 @@ footer{
     width: auto;
     height: 35px;
     border-radius: 5px;
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -57,10 +65,12 @@ footer{
     column-gap: 5px; 
     row-gap: 5px;
     justify-content: space-evenly;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
+    /* border: 1px solid rgba(0, 0, 0, 0.4); */
     border-radius: 10px;
-    margin: 10%; 
-    
+    margin: 10%;     
+    /* background-color: darkslategray; */
+
 }
 
 img{/* width: 100%; */
@@ -73,22 +83,30 @@ img{/* width: 100%; */
     border: 2px solid rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     /* visibility: hidden; */
+    
+    
 }
 
 .hide{
-    display: block;
+    display: none;
     border: 8px solid dodgerblue;
-
+    filter
     /* background:  dimgrey; */
-    visibility: hidden; 
+    /* visibility: hidden;  */
     /* clip: rect(0,0,0,0);
     color: transparent; */
        
 }
-/* .game-card{
+.game-card{
     border: 1px solid dodgerblue;
-} */
+    border-radius: 20px;
+    background-color: rgb(235, 243, 243);
 
+}
+
+#text{
+    align-content: right;
+}   
 
 
     
