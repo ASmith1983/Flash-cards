@@ -34,6 +34,8 @@ let restartButton = document.querySelector("#restartButton");
     document.querySelector("#scoreButton").innerText = `Score: ${score}`;
 // if button is clicked name of player should null
     document.querySelector("#myinput").innerText = "Enter name here";
+// clear out message board
+    document.querySelector(".game-status").innerText = "Try to find all the matches. Click any square below to begin";
 // startGame() function should be called
     startGame();
 });
@@ -53,7 +55,7 @@ function startGame() {
     for (let i = 0; i < cards.length; i++) {
         toBeShuffledCards.push(cards[i]);
     }
-  cards.forEach(function (card) {
+    cards.forEach(function (card) {
     card.addEventListener("click", (event) => {
       console.log(card);
       console.log(event.target.id);
@@ -64,20 +66,21 @@ function startGame() {
         hiddenCards.forEach(function (hcard) {
         hcard.addEventListener("click", (event) => {
 //   create time out function for when card is clicked to see vaule for 1 second before flipping back
+            console.log(event.target);
         let delayMilli = 500;
         setTimeout(function(){
-            event.target.childNodes[0].classList.toggle("hide");
+            event.target.firstChild.classList.toggle("hide");
         }, delayMilli);
 
-        event.target.childNodes[0].classList.toggle("hide");
+        event.target.firstChild.classList.toggle("hide");
 // push cardsselected into empty array
         if (cardSelected !== [0]) {
             cardSelected.push(event.target);
         }
-        // console.log(cardSelected[0]);
+        console.log(cardSelected[0].firstChild.dataset);
     //   if(cardSelected[1]){
 //  creat condition to check it cards are a match
-        if (cardSelected[0].dataset.dog == cardSelected[1].dataset.dog && cardSelected[0].firstChild.id == cardSelected[1].firstChild.id) {
+        if (cardSelected[0].firstChild.dataset.dog == cardSelected[1].firstChild.dataset.dog && cardSelected[0].firstChild.id == cardSelected[1].firstChild.id) {
         // console.log("looped worked");
 // if match add a point to score
         score += 1;
@@ -114,23 +117,24 @@ let doAlert= () =>{
     alert("Congratulations you found all the matches!"); 
 };
   // shuffle cards.
-// console.log(toBeShuffledCards);
-            // let shuffledCards = [];
-        //     //   let shuffledCards = toBeShuffledCards[randomCard];
-        // function shuffle(array){    
-        //     for (let i = 0; i < toBeShuffledCards.length; i++) {
-        //         let randomCard = Math.floor(Math.random() * toBeShuffledCards.length);
-        //         console.log(randomCard);
-        //         // if(randomCard != randomCard)
-        //         shuffledCards.push(toBeShuffledCards[randomCard]);
-        //     }}
-
-// Fisher-Yates method to shuffle cards:
+console.log(toBeShuffledCards);
+// other methods to shuffle============
+//             let shuffledCards = [];
+//         //     //   let shuffledCards = toBeShuffledCards[randomCard];
+//         // function shuffle(array){    
+//         //     for (let i = 0; i < toBeShuffledCards.length; i++) {
+//                 let randomCard = Math.floor(Math.random() * toBeShuffledCards.length);
+//                 console.log(randomCard);
+//                 if(randomCard != randomCard)
+//                 shuffledCards.push(toBeShuffledCards[randomCard]);
+//         //     }}
+// console.log(randomCard);
+// Fisher-Yates method to shuffle cards:=============
             let arrayShuffle = function(arr){
                 let newPos,
                     temp;
                 for(let i = arr.length -1; i > 0; i--){
-                    newPos = Math.floor(Math. random() * (i +1));
+                    newPos = Math.floor(Math.random() * (i +1));
                     temp = arr[i];
                     arr[i] = arr[newPos];
                     arr[newPos] = temp;
@@ -139,16 +143,23 @@ let doAlert= () =>{
             };
             let shuffledCards = arrayShuffle(toBeShuffledCards);
             console.log(shuffledCards);
-
+            hiddenCards.forEach((c,i) => {
+                console.log(c);
+                console.dir(shuffledCards[i]);
+                let tempCard = `<img src=${shuffledCards[i].src} id=${shuffledCards[i].id} data-dog=${shuffledCards[i].dataset.dog} class="hide">`
+                c.innerHTML = tempCard
+            })
 // we need to hide the cards value and flip all cards at start
             for (let i = 0; i < shuffledCards.length; i++) {
-                shuffledCards[i].classList.add("hide");
+                // hiddenCards.appendChild[shuffledCards[i]];
+                // shuffledCards[i].classList.add("hide");
             }
+            console.log(shuffledCards);
 // console.log(shuffledCards);
 // for(let i = 0; i < toBeShuffledCards.length; i++){
 //           toBeShuffledCards[i].classList.add("hide");
 // }      
-console.log(toBeShuffledCards);
+// console.log(toBeShuffledCards);
  
 };
 // start game
