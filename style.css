@@ -1,26 +1,30 @@
-html{ width: 100%;
+html{ 
+    width: 100%;
     height: auto;
     margin: 0px auto;
-    background-size:auto;
+    background-size: auto;
     
 }
+
 header{
-  margin-top: 2%;
+    margin-top: 1%;
 }
+
 h1,
 h2{  
-  font-size: 45px;
-  filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
+    margin: 2%;
+    font-size: 45px;
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
 }
 
 body{
-  width:100%;
-  margin: 0px auto;
-  height: 100%;
-  font-family: 'Permanent Marker', cursive;
-  background: linear-gradient(-45deg, #1c3241, rgb(22, 84, 165), #586172, #629cb8);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+    margin: 0px auto;
+    height: 100vh;
+    font-family: 'Permanent Marker', cursive;
+    background: linear-gradient(-45deg, #1c3241, rgb(22, 84, 165), #586172, #629cb8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    width:100%;
 }
 @keyframes gradient {
   0% {
@@ -35,107 +39,94 @@ body{
 }
 
 footer{
-  margin-bottom: 20%;
-  text-align: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 #mainTitle{
-  font-size: 75px;
-  font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 75px;
 
 }
 .game-status{
-  margin: 0 auto;
-  font-size: 40px;
+    margin: 0 auto;
+    font-size: 40px;
 }
 /* prompt box */
 #myinput{
-  font-size: 45%;
-  width: 0 auto;
-  height: 45px;
-  border-radius: 15px;
-  filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
-  font-family: 'Permanent Marker', cursive;
+    width: 0 auto;
+    height: 45px;
+    border-radius: 15px;
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 45%;
+
 }
 /* styles for score button used to display current players score */
 #scoreButton{
-  margin: 0 auto;
-  font-size: 45%;
-  width: 0 auto;
-  height: 45px;
-  border-radius: 15px;
-  filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
-  font-family: 'Permanent Marker', cursive;
+    font-size: 45%;
+    width: 0 auto;
+    height: 45px;
+    border-radius: 15px;
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
+    font-family: 'Permanent Marker', cursive;
+    margin: 0 auto;
 }
 /* styles for restart button */
 #restartButton{
-  margin: 5% auto;
-  font-size: 120%;
-  text-align:center;
-  width: 0 auto;
-  height: 45px;
-  border-radius: 15px;
-  filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
-  font-family: 'Permanent Marker', cursive;
+    font-size: 120%;
+    text-align:center;
+    width: 0 auto;
+    height: 45px;
+    border-radius: 15px;
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
+    font-family: 'Permanent Marker', cursive;
+    margin: 2% auto;
 }
 /* styles for div that contains scorebutton*/
 .score-board{
-  margin: 5% auto;
-  justify-content: center;
-  text-align: center;
-  border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5% auto;
   
 }
 /* Game Board outline and grid creation */
 .game-board { 
-  display: grid;
-  max-width: 75%;
-  max-height: 25%;
-  justify-content: space-evenly;
-  grid-template-rows: repeat(4, 150px);
-  grid-template-columns: repeat(4,150px); 
-  column-gap: 1px; 
-  row-gap: 15px;
-  justify-content: space-evenly;
-  filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
-  /* border: 1px solid rgba(0, 0, 0, 0.4); */
-  border-radius: 10px;
-  margin: 0 auto;     
-  /* background-color: darkslategray; */
+    display: grid;
+    max-width: 75%;
+    max-height: 25%;
+    justify-content: space-evenly;
+    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(4,100px); 
+    column-gap: 1px; 
+    row-gap: 15px;
+    justify-content: space-evenly;
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
+    border-radius: 10px;
+    margin: 0 auto;     
 
 }
 /* Stlyes for images */
 img{
-  display: block;
-  /* width: 100%; */
-  width: 135px;
-  /* height: 100%; */
-  height: 135px;
-  align-items: center;
-  margin: 0 auto;
-  /* border: 4px solid rgba(0, 0, 0, 0.4); */
-  border-radius: 50%;
-  /* visibility: hidden; */
-  
-  
+    width: 110px;
+    height: 110px;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: block;
 }
 /*  The class to add to make item hidden */
 .hide{
-  display: none;
-  border: 8px solid dodgerblue;
-  
-     
+    display: none;
+    border: 8px solid dodgerblue;
 }
 /* The game gard the doesnt not display any image */
 .game-card{
-  border: 1px solid rgb(29, 140, 250);
-  border-radius: 40px;
-  background: linear-gradient(-30deg, #85a7be, #586172, rgb(192, 176, 176), #f1f1f1);
-  border: 4px solid rgba(0, 0, 0, 0.4);
-  animation: gradient 15s ease infinite;
-  background-size: 400% 400%;
-
-  
+    border-radius: 40px;
+    background: linear-gradient(-30deg, #85a7be, #586172, rgb(15, 15, 15), #f1f1f1);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
 }
 @keyframes pulse {
   
@@ -149,28 +140,26 @@ img{
       background-position: 0% 50%;
   }
 }
-
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  border-radius: 20px;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-  filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    border-radius: 20px;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    filter: drop-shadow(16px 16px 20px dodgerblue) invert(5%);
+    display: none; /* Hidden by default */
 
 }
-
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; 
-  padding: 20px;
-  border: 1px solid dodgerblue;
-  width: 50%; 
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid dodgerblue;
+    width: 50%; 
+    background-color: #fefefe;
 }
