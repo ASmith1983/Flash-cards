@@ -1,3 +1,4 @@
+
 //name variable/array
 let name = [];
 // score variable
@@ -96,7 +97,7 @@ function startGame() {
 // clear cardSelected Array
         cardSelected = [];
 // end game if score equals 8
-        if (score == 2) {
+        if (score == 8) {
             gameStatus.innerText = "You found all the matches!";
             let delayMilli2 = 5000;
             setTimeout(() =>{
