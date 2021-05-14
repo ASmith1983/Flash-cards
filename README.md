@@ -20,8 +20,16 @@ Wire Frame:
 ### Technologies used to creat Project
 
 1. HTML
+   * Semantic HTML
 1. CSS
+   * CSS styling and layout
+   * CSS Grid
 1. JavaScript
+   * JavaScript programming
+   * Working with the DOM
+   * JavaScript events
+
+
 
 #
 ## Creating the Layout and Design:
