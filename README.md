@@ -51,16 +51,21 @@ Wire Frame:
   * Click on a second black square to reveal the card.
   * If the two cards match, the cards stay revealed.
   * If there is no match, the cards are hidden and you can click another pair.
+  * If a coorect pair is identified then a point should be added to the players score. 
+<br><br>
 <br><br>
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/FlashCards-%20finding_a_match.gif "Flashcards-finding a match.")
 <br><br>
-  * When you have correctly matched all 8 pairs of cards, the game ends and an alert window opens congratulating you.
+<br><br>
+   * When you have correctly matched all 8 pairs of cards, the game ends and an alert window opens congratulating you.
+   * Finally I used CSS and some animation to style the background and cards themselves. 
+   * Once complete I posted my project on Github.
+<br><br>
 <br><br>
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/FlashCards-%20endGame.gif "Flashcards-Game over.")
 <br><br>
-  * Finally I used CSS and some animation to style the background and cards themselves. 
-  * Last thing I was attaching and posting my project on Github.
-  
+<br><br>
+ 
 #
 ### Unsolved problems
 
