@@ -1,4 +1,6 @@
+#
 # Flash-cards
+
 The Flash Cards game is a basic matching game to test the player's memory by matching 16 images. <br> In order to win the game, the player needs to match each pair.
 <br><br>Example of Starting the game:
 <br><br>
@@ -6,6 +8,13 @@ The Flash Cards game is a basic matching game to test the player's memory by mat
 
 # 
 ## Process and Thought logic
+
+User Stories:
+* Creating a user story help me focus on who was my intended audience and what my basic goals were for the project.
+  * Game was created for a single player with specific MVP goals:
+    <br><br>
+          ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/Flash%20Cards-%20User%20stories.jpg "Flashcards-userStories.")
+     
 
 Wire Frame: 
 * First step was creating wire frame.
@@ -18,6 +27,7 @@ Wire Frame:
  
 #
 ### Technologies used to creat Project
+#
 
 1. HTML
    * Semantic HTML
@@ -68,6 +78,7 @@ Wire Frame:
  
 #
 ### Unsolved problems
+#
 
 1. Flipping all the cards to show current value prior to start.
 1. Adding a api to select images.
