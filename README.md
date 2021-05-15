@@ -16,7 +16,8 @@ User Stories:
     Example of project layout using Trello to design and create ideas:
 <br><br>    
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/Flash%20Cards-%20User%20stories.jpg "Flashcards-userStories.")
-     
+          
+#
 
 Wire Frame: 
 * First step was creating wire frame.
@@ -69,6 +70,7 @@ Wire Frame:
           Example of selecting matches:
 <br><br>          
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/FlashCards-%20finding_a_match.gif "Flashcards-finding a match.")
+#
 <br><br>
 <br><br>
    * When you have correctly matched all 8 pairs of cards, the game ends and an alert window opens congratulating you.
@@ -79,6 +81,7 @@ Wire Frame:
           Example of selecting all the matchs and win prompt:
 <br><br>          
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/FlashCards-%20endGame.gif "Flashcards-Game over.")
+#
 <br><br>
 <br><br>
  
