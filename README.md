@@ -70,7 +70,7 @@ Wire Frame:
    * When you have correctly matched all 8 pairs of cards, the game ends and an alert window opens congratulating you.
    * Finally I used CSS and some animation to style the background and cards themselves. 
    * Once complete I posted my project on Github.
-<br><br>
+   * Check out the finished project @ https://asmith1983.github.io/Flash-cards/<br><br>
 <br><br>
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/FlashCards-%20endGame.gif "Flashcards-Game over.")
 <br><br>
