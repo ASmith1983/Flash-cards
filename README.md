@@ -13,6 +13,8 @@ User Stories:
 * Creating a user story help me focus on who was my intended audience and what my basic goals were for the project.
   * Game was created for a single player with specific MVP goals:
     <br><br>
+    Example of project layout using Trello to design and create ideas:
+<br><br>    
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/Flash%20Cards-%20User%20stories.jpg "Flashcards-userStories.")
      
 
@@ -61,9 +63,11 @@ Wire Frame:
   * Click on a second black square to reveal the card.
   * If the two cards match, the cards stay revealed.
   * If there is no match, the cards are hidden and you can click another pair.
-  * If a coorect pair is identified then a point should be added to the players score. 
+  * If a correct pair is identified then a point should be added to the players score. 
 <br><br>
 <br><br>
+          Example of selecting matches:
+<br><br>          
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/FlashCards-%20finding_a_match.gif "Flashcards-finding a match.")
 <br><br>
 <br><br>
@@ -72,6 +76,8 @@ Wire Frame:
    * Once complete I posted my project on Github.
    * Check out the finished project @ https://asmith1983.github.io/Flash-cards/<br><br>
 <br><br>
+          Example of selecting all the matchs and win prompt:
+<br><br>          
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/FlashCards-%20endGame.gif "Flashcards-Game over.")
 <br><br>
 <br><br>
