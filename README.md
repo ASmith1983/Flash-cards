@@ -77,11 +77,23 @@ Wire Frame:
 <br><br>
  
 #
-### Unsolved problems
+### Unsolved problems and Major issues:
 #
 
+1. One of the serveral difficult stages to over come was finding a way to get my cards to flip and display images.
+1. Another major challenge was creating a shuffle function that worked and stored the correct data then render that to my cards. 
 1. Flipping all the cards to show current value prior to start.
 1. Adding a api to select images.
 1. Fixing small glitches suchs as selecting same card once card has been selected.
+<br><br>
+#
+
+#
+### Future Modifications and Ideas:
+#
+
+1. Implementing an API to pull various different images and other information.
+1. Creat a setting which allows players to chose amount of images/cards to be displayed. Ex: 4, 8, 16, 32, etc...
+1. Attach sound to each action that is taken while game is in play. Such as when player clicks square they hear a dog bark.
 <br><br>
 #
