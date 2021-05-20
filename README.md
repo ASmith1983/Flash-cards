@@ -102,7 +102,7 @@ Wire Frame:
 #
 
 1. Implementing an API to pull various different images and other information.
-1. Creat a setting which allows players to chose amount of images/cards to be displayed. Ex: 4, 8, 16, 32, etc...
+1. Create a setting which allows players to choose amount of images/cards to be displayed. Ex: 4, 8, 16, 32, etc...
 1. Attach sound to each action that is taken while game is in play. Such as when player clicks square they hear a dog bark.
 <br><br>
 #
