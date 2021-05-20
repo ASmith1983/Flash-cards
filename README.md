@@ -29,7 +29,7 @@ Wire Frame:
           ![This is a alt text.](https://github.com/ASmith1983/Flash-cards/blob/main/Images%26gifs/FlashCards-%20img:gif/IMG_9124.JPG "Flashcards-wire frame.")
  
 #
-### Technologies used to creat Project
+### Technologies used to create Project
 #
 
 1. HTML
